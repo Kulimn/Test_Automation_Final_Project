@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Environment>
+    <!-- General -->
+    <WaitTime>2</WaitTime>
+    <ScreenshotPath>/Users/sergeykiseliov/Desktop/test_automation_finel_project1/allure_screen_shots/</ScreenshotPath>
+
+    <!-- Web -->
+    <Browser>Chrome</Browser>
+    <Url>https://www.saucedemo.com/</Url>
+    <UserName>standard_user</UserName>
+    <Password>secret_sauce</Password>
+    <CSV_Location>/Users/sergeykiseliov/Desktop/test_automation_finel_project1/data_driving_testing/users.csv</CSV_Location>
+
+    <!-- Mobile -->
+    <Mobile_Device>Android</Mobile_Device>
+    <Udid>f1d9a7c4</Udid>
+    <App_Package>com.shivgadhia.android.ukMortgageCalc</App_Package>
+    <App_Activity>.MainActivity</App_Activity>
+    <Bundle_ID>com.shivgadhia.ukMortgageCalc</Bundle_ID>
+    <Appium_Server>http://localhost:4723/wd/hub</Appium_Server>
+    <Swipe_Duration>200</Swipe_Duration>
+
+    <!-- API -->
+    <API_Url>http://localhost:3000/</API_Url>
+    <API_UserName>admin</API_UserName>
+    <API_Password>admin</API_Password>
+</Environment>

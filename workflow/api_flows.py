@@ -1,0 +1,36 @@
+import allure
+
+from extensions.api_actions import APIActions
+from utilities.common_ops import get_data
+
+url = get_data('API_Url')
+user = get_data('API_UserName')
+password = get_data('API_Password')
+
+class APIFlows:
+    @staticmethod
+    @allure.step('Get value from Grafana api flow')
+    def get_value_from_api(nodes):
+        response = APIActions.get(url + 'api/teams/search', user, password)
+        return APIActions.extract_value_from_response(response, nodes)
+
+    @staticmethod
+    @allure.step('Create New Team in Grafana flow')
+    def create_team(name, email):
+        payload = {'name': name, 'email': email}
+        status_code = APIActions.post(url + 'api/teams', payload, user, password)
+        return status_code
+
+    @staticmethod
+    @allure.step('Update Team in Grafana flow')
+    def update_team(name, email, id):
+        payload = {'name': name, 'email': email}
+        status_code = APIActions.put(url + 'api/teams/'+ str(id), payload, user, password)
+        return status_code
+
+    @staticmethod
+    @allure.step('Delete Team in Grafana flow')
+    def delete_team(id):
+        status_code = APIActions.delete(url + 'api/teams/' + str(id), user, password)
+        return status_code
+
