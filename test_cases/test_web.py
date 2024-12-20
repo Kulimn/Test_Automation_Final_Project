@@ -28,7 +28,7 @@ class Test_Web:
         WebFlows.adding_product_to_cart()
         WebFlows.delete_products(By.PRODUCT, Product_Type.BACKPACK) # Delete Product By Name
         WebFlows.delete_products(By.INDEX, 4)                 # Delete Product By Index
-        WebFlows.verify_number_of_products(4)
+        WebFlows.verify_number_of_products(3)
 
     @allure.title('Test04: Verify Customers Information Entry During Checkout ')
     @allure.description('This test verifies inserting customers information')
